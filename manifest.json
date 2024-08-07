@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Embedded Website Timer",
+    "version": "1.0",
+    "description": "Embeds a timer to track active time on websites",
+    "permissions": ["storage"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
